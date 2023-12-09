@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Buddy - Log in or Sign up</title>
+    <link rel="stylesheet" type="text/css" href="/login.css">
+       <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="app-header">
+            <img src="/logo2.png" alt="Budget Buddy Logo" class="logo"> <!-- Added logo here -->
+            <h1>Your personal budget tracker.</h1>
+            <p>View a summary of your money coming in and going out of your pocket.</p>
+        </header>
+
+        <form action="/login" method="post" class="login-form">
+            <input placeholder="Email" name="email" type="text" value="{{ email }}">
+            <br>
+            {{!-- <input placeholder="Password" name="password" type="password" value="{{ password }}"> --}}
+            <!-- Password input with show/hide toggle -->
+            <div class="password-container">
+                <input id="password" placeholder="Password" name="password" type="password" value="{{ password }}">
+                <span class="toggle-password" onclick="togglePassword()"><i class="fas fa-eye"></i></span>
+            </div>
+            <br>
+
+            <p class="error-message">{{ errorMessage }}</p>
+
+            <input class="sub" type="submit" value="Log In">
+
+            <h3>Try Budget Buddy for free Now!</h3>
+            <a href="/signup">Create a new account</a>
+        </form>
+    </div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const toggleIcon = document.querySelector('.toggle-password i');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.classList.remove('fa-eye');
+                toggleIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.classList.remove('fa-eye-slash');
+                toggleIcon.classList.add('fa-eye');
+            }
+        }
+    </script>
+</body>
+
+</html>

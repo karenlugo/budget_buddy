@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Buddy - Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="/signup.css">
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <img src="/logo2.png" alt="Budget Buddy Logo" class="logo"> <!-- Added logo here -->
+    <p>Sign up now. It's quick and easy!</p>
+    <form action="/signup" method="post">
+        <input placeholder="First Name" name="firstName" type="text" value="{{ firstName }}">
+        <input placeholder="Last Name" name="lastName" type="text" value="{{ lastName }}">
+        <input placeholder="Email" name="email" type="text" value="{{ email }}">
+        {{!-- <input placeholder="Password" name="password" type="password" value="{{ password }}"> --}}
+        <!-- Password input with show/hide toggle -->
+        <div class="password-container">
+            <input id="password" placeholder="Password" name="password" type="password" value="{{ password }}">
+            <span class="toggle-password" onclick="togglePassword()"><i class="fas fa-eye"></i></span>
+        </div>
+
+        <div class="success">{{successMessage}}</div>
+
+        <div class="error">{{errorMessage}}</div>
+
+        <br>
+
+        <input class="sub" type="submit" value="Sign Up" {{#if isDisabled}} disabled{{/if}}>
+
+        <a href="/">Go back to login page</a>
+
+    </form>
+
+    <script>
+        // Redirect to login page after 3 seconds
+
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const toggleIcon = document.querySelector('.toggle-password i');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.classList.remove('fa-eye');
+                toggleIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.classList.remove('fa-eye-slash');
+                toggleIcon.classList.add('fa-eye');
+            }
+        }
+    </script>
+    {{#if successMessage}}
+          <div class="success">{{successMessage}}</div>
+          <script>
+            // After 6 seconds, redirect to the login page
+            setTimeout(function () {
+              window.location.href = '{{redirectUrl}}';
+            }, 6000);
+          </script>
+    {{/if}}
+
+</body>
+
+</html>

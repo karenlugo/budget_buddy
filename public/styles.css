@@ -1,0 +1,499 @@
+.logo {
+    width: 100px; /* Set a fixed width for the logo */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* This will prevent the image from being inline */
+    margin-left: 0; /* Aligns the logo to the left */
+    margin-right: auto;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f2f5; /* Light grey background for the entire page */
+}
+
+.header {
+    background-color: #f0f2f5;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds depth to the header */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.8em; /* Slightly larger font size for the header */
+    color: #CC5500;
+}
+
+.balance {
+    font-weight: bold;
+    font-size: 1.1em; /* Larger font size for better visibility */
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    background-color: #f0f2f5; /* Lighter grey for tabs background */
+    padding: 10px;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #e0e0e0; /* Slightly darker grey for tab background */
+    border: none; /* Removing border for a flatter design */
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for interactions */
+}
+
+.tab:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect on hover for depth */
+}
+
+.tab.active {
+    background-color: #CC5500;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Consistent shadow on active tab */
+}
+
+
+  .form-container {
+    display: grid;
+    place-items: center;
+  }
+      
+  .transaction-form {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: center; /* Centers the items horizontally */
+    flex-wrap: wrap; /* Allows items to wrap as needed */
+    margin: 20px auto; /* Centers the form in its container and adds space above and below */
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* Adjust this value as needed */
+    text-align: center;
+}
+
+.transaction-form > div {
+    flex: 1 1 auto; /* This will allow each item to grow and shrink as needed */
+    margin: 0 10px; /* Adds space between form elements */
+  }
+  
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    align-items: center; /* Aligns buttons vertically */
+    width: 100%; /* Ensures the container takes up full width */
+    padding: 10px; /* Add padding to separate buttons from other form elements */
+}
+
+
+/* Styles for the transaction actions container */
+.transaction-actions {
+    text-align: right; /* Aligns the buttons to the right */
+    padding: 10px; /* Adds some padding around the buttons */
+    margin-top: 10px; /* Adds some space above the buttons container */
+}
+
+.transaction-form label {
+    white-space: nowrap; /* Ensures that labels do not wrap */
+}
+
+.transaction-form input,
+.transaction-form select,
+
+/* For each element within the form, make sure the width is controlled. For example: */
+.transaction-form input,
+.transaction-form select,
+.transaction-form .button-container {
+    box-sizing: border-box; /* This makes sure padding and borders are included in the total width */
+    max-width: 100%; /* This prevents the element from exceeding the width of the form */
+    /* Other styles */
+}
+
+
+
+/* Adds space between buttons */
+.saveBtn + .cancelBtn {
+    margin-left: 10px; /* Adjust the value as needed */
+}
+
+/* Adds space to the left of the cancel button */
+.cancelBtn {
+    margin-left: 10px; /* Adjust the value as needed */
+}
+
+
+
+
+.transaction-grid {
+    margin: 0 auto; /* This centers the grid if it has a set max-width */
+    padding: 0 20px; /* Adjust the padding to control the width of the content inside the grid */
+    /* If you have a max-width for the .transaction-grid, set it here */
+    max-width: 1200px; /* Example max-width; adjust as necessary */
+}
+
+.transaction-form {
+    width: calc(100% - 40px); /* This subtracts the left and right padding from the total width */
+    margin: 20px auto; /* Centers the form in its container and adds space above and below */
+    padding: 15px;
+    /* Other styles */
+}
+
+
+
+
+.transaction-actions {
+    display: flex;
+    justify-content: flex-end; /* Aligns the button to the right */
+    padding: 10px; /* Adds some padding around the buttons */
+    margin-top: 10px; /* Adds some space above the buttons container */
+}
+
+
+.transaction-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0; /* More space above and below the list */
+    text-align: left;
+    background-color: #f9f9f9;
+}
+
+.transaction-details:hover {
+    background-color: #ccc; /* Highlight on hover */
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+.month-selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 20px;
+    background-color: #f0f2f5;
+    color: #CC5500;
+}
+
+.month-selection span {
+    font-weight: bold;
+    color: #CC5500; /* Dark grey for better readability */
+}
+
+
+/* Styles for transaction list header */
+.transaction-list-header {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    background-color: #CC5500;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.transaction-list-header h2 {
+    margin: 0;
+    font-size: 1.4em;
+}
+
+
+
+.transaction-actions {
+    display: flex;
+    text-align: center; /* Centering the buttons */
+    background-color: #f0f2f5;
+    /* border-top: 1px solid #CC5500; */
+}
+
+.transaction-action-btn {
+    background-color: #CC5500; /* Using the primary color */
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px; /* Increased font size */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.transaction-action-btn:hover {
+    background-color: #f9f9f9; /* Darker shade on hover */
+    color:#CC5500;
+}
+
+/* Additional styles can go here as needed */
+
+
+.transaction-list-header {
+    color: white;
+    /* ... existing styles ... */
+}
+
+/* Other styles remain the same unless specific changes are requested or needed */
+
+.sort-btn {
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px 5px; /* Slight padding around the button for better clickability */
+    font-size: 0.8em; /* You can adjust the size to fit your design */
+    line-height: 1; /* Adjust line height to ensure the arrow aligns nicely with the text */
+    vertical-align: middle; /* Aligns the button to the middle of the text */
+}
+
+.sort-btn:hover {
+    color: black; /* Example hover color; adjust as needed */
+}
+
+.transaction-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* You can adjust this if you don't want the grid to take full width */
+}
+
+.transaction-list-header,
+.transaction-list-header > div ,
+.transaction-details > span {
+    flex: 1; /* Each child will take an equal amount of space */
+    text-align: left; /* Center the text */
+    padding: 8px;
+    border: 1px solid #ddd;
+
+    
+}
+
+.transaction-list-header {
+    display: flex;
+    justify-content: space-between; /* This will line up items with equal space between them */
+}
+
+.transaction-list > li {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.transaction-details {
+    display: flex;
+    flex: 1;
+}
+
+/* Optional: if you want to remove the last border in the details, as there's nothing to the right */
+.transaction-details > span:last-child {
+    border-right: none;
+}
+
+/* Optional: remove bottom border from each list item except the last */
+.transaction-list > li:not(:last-child) {
+    border-bottom: none;
+}
+
+/* Optional: if you want to add a border after each span except the last one */
+.transaction-details > span:not(:last-child) {
+    border-right: 1px solid #ddd;
+}
+
+.sort-btn {
+    /* Additional styles for your button */
+    background: none;
+    border: none;
+    cursor: pointer;
+    /* Align the button to the right */
+    margin-left: auto;
+}
+
+.transaction-list-header {
+    display: flex;
+    /* Add other styling for your header here */
+}
+
+/*new for sort btn
+/* Existing styles ... */
+
+.transaction-list-header {
+    /* ... existing styles ... */
+    position: relative; /* Relative positioning to be the anchor for the absolute positioning of sort options */
+}
+
+.sort-btn {
+    /* ... existing styles ... */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px 5px;
+    /* Additional styles if needed */
+}
+
+.sort-options {
+    display: none; /* Hide by default */
+    position: absolute; /* Position absolutely within the header item */
+    top: 100%; /* Positioned right below the sort button */
+    background: white; /* A contrasting background */
+    border: 1px solid #ccc; /* Light border for the dropdown */
+    border-radius: 5px; /* Optional: rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: shadow for depth */
+    z-index: 10; /* Ensures it stacks on top of other content */
+}
+
+.sort-options button {
+    display: block; /* Stack the buttons vertically */
+    width: 100%; /* Full width of the container */
+    padding: 8px 10px; /* Padding for buttons */
+    border: none; /* No borders between buttons */
+    background: none; /* Transparent background */
+    text-align: left; /* Align text to the left */
+    margin-left: auto;
+}
+
+.sort-options button:hover {
+    background-color: #f4f4f4; /* Light background on hover for interactivity */
+}
+
+/* Additional styles can go here as needed */
+
+.date-header { /* The class for each cell in your header grid */
+    position: relative; /* This sets the stage for absolute positioning inside */
+    /* Other styling for your grid header cell */
+  }
+
+  .type-header { /* The class for each cell in your header grid */
+    position: relative; /* This sets the stage for absolute positioning inside */
+    /* Other styling for your grid header cell */
+  }
+  
+  #sortOptions {
+    position: absolute;
+    top: 100%; /* This will put the top of the dropdown right at the bottom of the cell */
+    right: 0; /* This aligns the dropdown's right edge with the right edge of the cell */
+    display: none; /* Keeps the dropdown hidden until it's needed */
+    z-index: 10; /* Ensures the dropdown is on top of other content */
+    /* You might need to add width, background, and other styling */
+  }
+  
+.date-header {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between; /* This will push the span and button to opposite ends */
+    align-items: center; /* This will vertically center them if needed */
+}
+
+.type-header {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between; /* This will push the span and button to opposite ends */
+    align-items: center; /* This will vertically center them if needed */
+}
+.sort-btn {
+    /* Add other styling for your button here, for example: */
+    margin-left: auto; /* This will push the button to the far right */
+    cursor: pointer; /* Changes cursor to pointer on hover over button */
+}
+
+.transaction-item {
+    cursor: pointer;
+    /* Other styles */
+}
+
+.transaction-item:hover {
+    background-color: #f0f0f0; /* Highlight the item on hover */
+}
+
+.selected-transaction {
+    background-color: #ffb37e; /* or any color you want for the highlight */
+  }
+
+
+  .transaction-list-header,
+  .transaction-actions {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px; /* Adjust padding if necessary to match between both elements */
+      /* ... other styles ... */
+  }
+  
+  .transaction-actions {
+      justify-content: flex-end; /* This will align the action buttons to the right */
+      /* ... other styles ... */
+  }
+  
+  /* Ensure the transaction-grid or any parent container has a defined width if needed */
+  .transaction-grid {
+      display: flex;
+      flex-direction: column;
+      width: 100%; /* Adjust if necessary to control the width of child elements */
+      /* ... other styles ... */
+  }
+
+  
+
+  /* summary table */
+  .transaction-summary {
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-summary #summaryTable {
+    width: 60%; /* Set this to your desired width, e.g., 60% of the parent container */
+    max-width: 800px; /* You can set a max-width to ensure it doesn't get too big on larger screens */
+    margin: 0 auto; /* This will center the table in the transaction-summary container */
+    border-collapse: collapse;
+}
+
+.transaction-summary th, .transaction-summary td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.transaction-summary th {
+    background-color: #CC5500; /* Change color to your preference */
+    color: white;
+}
+
+.transaction-summary td {
+    background-color: #fafafa;
+}
+
+.transaction-summary th[colspan="2"] {
+    text-align: center;
+}
+
+.transaction-summary #expenseBreakdown td {
+    padding-left: 20px; /* Indent expense breakdown items for clarity */
+}
+
+.transaction-summary tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.transaction-summary tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+#monthlyExpenseChart {
+  width: 400px;
+  height: 200px;
+  display: block; /* Add display block to prevent inline display */
+  padding: 20px;
+  
+}

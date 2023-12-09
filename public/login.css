@@ -1,0 +1,198 @@
+.logo {
+  margin-left: 60px;
+}
+
+body {
+  background-color: #f0f2f5;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding-top: 100px; /* Adjust the padding to position the content as needed */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  display: flex;
+  flex-direction: row; /* Ensure the header and form are side-by-side */
+  align-items: flex-start; /* Align the top edges of header and form */
+  gap: 40px; /* Increase the space between header and form if needed */
+  padding: 20px; /* Padding inside the container */
+  max-width: 900px; /* Container max-width */
+  margin: auto; /* Center the container */
+}
+
+.app-header {
+  flex-basis: 40%; /* Reduce the width of the header if needed */
+  max-width: 40%; /* Ensure the header does not exceed the specified percentage of the container */
+  font-size: 1.2em; /* Make the text larger */
+}
+
+.login-form {
+  flex-basis: 50%; /* Increase the width of the form if needed */
+  max-width: 400px; /* Keep the form maximum width */
+  margin-left: auto; /* Push the form to the right */
+  padding-left: 50px; /* Add more padding to push the form further right */
+  transform: translateX(15%); /* Adjust position accurately */
+
+  /* Other form styles remain the same */
+}
+
+
+/* Make the app-header text bigger and adjust alignment if necessary */
+.app-header h1,
+.app-header p {
+  text-align: left; /* Align to the left */
+  margin-left: 0; /* Adjust left margin as needed */
+}
+
+.app-header h1 {
+  font-size: 2em; /* Larger font size for the main header */
+  color: #080E4B; /* Keep the header color */
+  margin-bottom: 0.5em; /* Adjust bottom margin */
+}
+
+.app-header p {
+  font-size: 1.2em; /* Larger font size for the subheader */
+  color: #606770; /* Subheader color */
+  margin-bottom: 1em; /* Adjust bottom margin */
+}
+
+/* Keep the rest of the form styles unchanged */
+/* ... */
+
+
+/* Keep the rest of the original form styles unchanged */
+
+
+body {
+  background-color: #f0f2f5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-header h1,
+.app-header p {
+  text-align: center;
+  margin: 0;
+  padding-top: 20px;
+}
+
+.app-header h1 {
+  font-size: 50px;
+  color: #080E4B;
+  margin-bottom: 5px;
+}
+
+.app-header p {
+  font-size: 16px;
+  color: #CC5500;
+  margin-bottom: 20px;
+}
+
+.form-wrapper {
+  max-width: 400px;
+  margin: 20px auto;
+  position: relative;
+  left: 100%; /* Increased to move the form further to the right */
+}
+
+/* Keep the rest of the form styles unchanged */
+
+/* Rest of your styles remain the same */
+
+body {
+  background-color: #f0f2f5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.sub {
+  background-color: #080E4B;
+  color: #CC5500;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.sub:hover {
+  /*background-color: #166fe5;*/
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect on hover for depth */
+
+}
+
+h3 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #CC5500;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+a:hover {
+  color: #080E4B;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+
+ /* Additional CSS for styling */
+ .password-container {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
